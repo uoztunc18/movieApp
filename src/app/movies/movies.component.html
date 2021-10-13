@@ -1,0 +1,64 @@
+<div *ngIf="movies.length>0; else noMovies">
+
+    <h1>Movie List</h1>
+    <p class="alert alert-info">{{movies.length}} film bulundu.</p>
+
+    <div class="my-2">
+        <input type="checkbox" class="form-check-input" [(ngModel)]="showPop" id="showPop">
+        <label for="showPop" class="form-check-label mx-2">Show popular movies</label>
+    </div>
+
+    <ng-template [ngTemplateOutlet]="popMovies" *ngIf="showPop"
+        [ngTemplateOutletContext]="{ pop: popularMovies}"></ng-template>
+
+    <div class="mb-3">
+        <input type="text" class="form-control" [(ngModel)]="filterText" (ngModelChange)="filterChange()"
+            placeholder="Search">
+    </div>
+
+    <ng-template [ngTemplateOutlet]="movieList" [ngTemplateOutletContext]="{ input: filteredMovies}">
+    </ng-template>
+</div>
+
+<ng-template #noMovies>
+    <div class="alert alert-warning">
+        No movies found!
+    </div>
+</ng-template>
+
+<ng-template #movieList let-myList="input">
+    <div class="card mb-4" *ngFor="let item of myList">
+        <div class="row">
+            <div class="col-md-3">
+                <img src="assets/img/{{item.imgUrl}}" alt="" class="img-fluid rounded-start">
+            </div>
+            <div class="col-md-9">
+                <div class="card-body">
+                    <h2 class="card-title">{{item.title}}</h2>
+                    <p class="card-text">{{item.description | summary : 400}}</p>
+                    <a routerLink="/movies/{{item.id}}" class="btn btn-sm btn-outline-primary">Details</a>
+                    <button (click)="addToList($event, item)" class="btn-sm  ms-2 btn-primary">Add to the list</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #popMovies let-popMovies="pop">
+    <h4 class="mb-3">Popular Movies</h4>
+    <div class="row row-cols-5 g-4 mb-3">
+        <div class="col" *ngFor="let item of popMovies">
+            <div class="card h-100">
+                <img src="/assets/img/{{item.imgUrl}}" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        {{item.title}}
+                    </h5>
+                    <p class="card-text" style="font-size: smaller;">
+                        {{item.description | summary : 150}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>

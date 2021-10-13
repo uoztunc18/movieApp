@@ -1,0 +1,9 @@
+<div *ngIf="movie else noMovies">
+    {{movie.title}}
+</div>
+
+<ng-template #noMovies>
+    <div class="alert alert-warning">
+        No movies found!
+    </div>
+</ng-template>

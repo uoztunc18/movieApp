@@ -1,0 +1,63 @@
+{
+    "movies": [
+        {
+            "id": 1,
+            "title": "Movie 1",
+            "description": "A bus transporting the inmates is flipped resulting in the felons escaping. In order to round up and once again incarcerate the criminals the cops form a special task force that needs to work in haste. The chief detective forms a crack team and is rearing to go because time is of the essence. Moreover, the criminals are dangerous on the loose. The matter is complicated when a criminal gang is soon involved and interferes.",
+            "imgUrl": "1.jpeg",
+            "popular": true,
+            "categoryId": 1
+        },
+        {
+            "id": 2,
+            "title": "Movie 2",
+            "description": "A transporting the inmates is flipped resulting in the felons escaping. In order to round up and once again incarcerate the criminals the cops form a special task force that needs to work in haste. The chief detective forms a crack team and is rearing to go because time is of the essence. Moreover, the criminals are dangerous on the loose. The matter is complicated when a criminal gang is soon involved and interferes.",
+            "imgUrl": "2.jpeg",
+            "popular": true,
+            "categoryId": 2
+        },
+        {
+            "id": 3,
+            "title": "Movie 3",
+            "description": "A bus the inmates is flipped resulting in the felons escaping. In order to round up and once again incarcerate the criminals the cops form a special task force that needs to work in haste. The chief detective forms a crack team and is rearing to go because time is of the essence. Moreover, the criminals are dangerous on the loose. The matter is complicated when a criminal gang is soon involved and interferes.",
+            "imgUrl": "3.jpeg",
+            "popular": true,
+            "categoryId": 3
+        },
+        {
+            "id": 4,
+            "title": "Movie 4",
+            "description": "A bus transporting the inmates is flipped resulting in the felons escaping. In order to round up and once again incarcerate the criminals the cops form a special task force that needs to work in haste. The chief detective forms a crack team and is rearing to go because time is of the essence. Moreover, the criminals are dangerous on the loose. The matter is complicated when a criminal gang is soon involved and interferes.",
+            "imgUrl": "4.jpeg",
+            "popular": true,
+            "categoryId": 2
+        },
+        {
+            "id": 5,
+            "title": "Movie 5",
+            "description": "A bus transporting the inmates is flipped resulting in the felons escaping. In order to round up and once again incarcerate the criminals the cops form a special task force that needs to work in haste. The chief detective forms a crack team and is rearing to go because time is of the essence. Moreover, the criminals are dangerous on the loose. The matter is complicated when a criminal gang is soon involved and interferes.",
+            "imgUrl": "5.jpeg",
+            "popular": true,
+            "categoryId": 4
+        }
+    ],
+
+    "categories": [
+        {
+            "id": 1,
+            "name": "Drama"
+        },
+        {
+            "id": 2,
+            "name": "Horror"
+        },
+        {
+            "id": 3,
+            "name": "Adventure"
+        },
+        {
+            "id": 4,
+            "name": "Sport"
+        }
+    ]
+}
